@@ -5,14 +5,14 @@ import MinuteHand from './MinuteHand';
 import SecondHand from './SecondHand';
 import HourNumbers from './HourNumbers';
 
-const BaseClock = () => {
+const BaseClock = (props) => {
     return (
         <div className='clock-container'>
             <HourNumbers />
             <Knob />
-            <HourHand />
-            <MinuteHand />
-            <SecondHand />
+            <HourHand angle={props.hourAngle}/>
+            <MinuteHand angle={props.minuteAngle}/>
+            <SecondHand angle={props.secondAngle}/>
         </div>
     )
 };

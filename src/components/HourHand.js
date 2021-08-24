@@ -1,8 +1,8 @@
 import './HourHand.css';
 
-const HourHand = () => {
+const HourHand = (props) => {
     return (
-        <div className='hour-hand'>
+        <div className='hour-hand' style={{ transform: `rotate(${props.angle}deg) translateX(-50%)` }}>
             
         </div>
     )
