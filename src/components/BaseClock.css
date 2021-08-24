@@ -1,0 +1,8 @@
+.clock-container {
+    background-color: gray;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    position: relative;
+}
