@@ -1,13 +1,12 @@
 .second-hand {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 50%;
-    transform: translateX(-50%);
     background-color: red;
     width: 3px;
-    height: 48%;
+    height: 50%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     z-index: 10;
-    transform-origin: bottom;
+    transform-origin: 0 80%;
 }

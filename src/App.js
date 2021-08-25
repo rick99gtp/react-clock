@@ -29,10 +29,6 @@ function App() {
 
     return () => clearInterval(timer);
   },[]);
-
-  useEffect(() => {
-    // console.log(secondAngle);
-  },[secondAngle]);
   
   return (
     <div className="App">
