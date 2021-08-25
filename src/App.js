@@ -13,20 +13,24 @@ function App() {
 
       const d = new Date();
 
+      // get percentages
       const secondsPct = d.getSeconds() / 60;
       const minutesPct = (secondsPct + d.getMinutes()) / 60;
       const hoursPct = (minutesPct + d.getHours()) / 12;
 
+      // get angles
       const seconds = secondsPct * 360;
       const minutes = minutesPct * 360;
       const hours = hoursPct * 360;
 
+      // store state
       setSecondAngle(seconds);
       setMinuteAngle(minutes);
       setHourAngle(hours);
 
     },1000);
 
+    // When component unmounts
     return () => clearInterval(timer);
   },[]);
   

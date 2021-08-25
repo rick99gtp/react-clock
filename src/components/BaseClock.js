@@ -13,21 +13,16 @@ const BaseClock = (props) => {
         hashMarkArray.push(i);
     }
 
-    // const hourHashMarksArray = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
-    const hourHashMarks = hashMarkArray.map((mark, idx) => <MinuteHashMarks key={mark} size={mark} angle={ mark * 6} />);
-
-    // create all minute hashmarks
-    // const minuteHashMarksArray = [];
-    // const minuteHashMarks = minuteHashMarksArray.map(mark => <MinuteHashMarks angle={mark * 30} />);
+    const hourHashMarks = hashMarkArray.map(mark => <MinuteHashMarks key={mark} size={mark} angle={ mark * 6} />);
 
     return (
         <div className='clock-container'>
             <HourNumbers />
-            <Knob />
             <HourHand angle={props.hourAngle}/>
             <MinuteHand angle={props.minuteAngle}/>
             <SecondHand angle={props.secondAngle}/>
             {hourHashMarks}
+            <Knob />
         </div>
     )
 };
